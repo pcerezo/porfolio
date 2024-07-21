@@ -1,0 +1,19 @@
+#tools {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+#tools ul {
+    list-style: none;
+    padding: 0;
+}
+
+#tools li {
+    background: #f4f4f4;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+  

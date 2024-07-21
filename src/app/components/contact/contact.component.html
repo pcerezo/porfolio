@@ -1,1 +1,14 @@
-<p>contact works!</p>
+<section id="contact">
+    <h2>Contacto</h2>
+    <form (submit)="submitForm()">
+    <input type="text" name="nombre" placeholder="Nombre" required [(ngModel)]="nombre">
+    <input type="email" name="email" placeholder="Email" required [(ngModel)]="email">
+    <textarea name="mensaje" placeholder="Mensaje" required [(ngModel)]="mensaje"></textarea>
+    <button type="submit">Enviar</button>
+    </form>
+    <div class="contact-info">
+    <p>Email: ejemplo&#64;correo.com</p>
+    <p>Teléfono: +123456789</p>
+    </div>
+</section>
+  

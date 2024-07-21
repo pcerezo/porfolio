@@ -1,1 +1,11 @@
-<p>projects works!</p>
+<section id="projects">
+    <h2>Mis proyectos</h2>
+    <div class="project-grid">
+        @for (project of projects; track $index) {
+            <div class="project-card">
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.body }}</p>
+            </div>
+        }
+    </div>
+</section>
