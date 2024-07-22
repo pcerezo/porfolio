@@ -6,11 +6,13 @@ import { AboutComponent } from "./components/about/about.component";
 import { ToolsComponent } from "./components/tools/tools.component";
 import { ContactComponent } from "./components/contact/contact.component";
 import { FooterComponent } from "./components/footer/footer.component";
+import { WelcomeComponent } from "./components/welcome/welcome.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, ProjectsComponent, AboutComponent, ToolsComponent, ContactComponent, FooterComponent],
+  imports: [RouterOutlet, HeaderComponent, ProjectsComponent, AboutComponent, ToolsComponent, ContactComponent, 
+    FooterComponent, WelcomeComponent, WelcomeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

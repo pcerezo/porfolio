@@ -1,0 +1,24 @@
+#welcome {
+    margin-top: 50px;
+    margin-bottom: -40px;
+    background: url('/assets/welcome-background.webp') no-repeat center center;
+    background-size: cover;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#welcome .container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#welcome h1 {
+    font-size: 3em;
+    font-weight: bold;
+}
+
+#welcome p.lead {
+    font-size: 1.25em;
+}
+  
