@@ -1,9 +1,12 @@
 <section id="tools">
-    <h2>Herramientas y lenguajes</h2>
-    <ul>
+    <h2>Frameworks, lenguajes y herramientas</h2>
+    <div class="tools-grid">
         @for (tool of tools; track $index) {
-            <li>{{ tool }}</li>
+            <div class="tools-card d-flex align-items-center">
+                <img class="icon" src="/assets/icons/{{tool.icon}}.png">
+                <h5>{{ tool.nombre }}</h5>
+            </div>
         }
-    </ul>
+    </div>
 </section>
   

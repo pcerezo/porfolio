@@ -9,13 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ToolsComponent implements OnInit{
   tools = [
-    'UI design',
-    'UX design',
-    'Wireframing',
-    'Diagramming',
-    'Brainstorming',
-    'Online whiteboard',
-    'Team collaboration'
+    { nombre: 'Angular', icon: 'angular' },
+    { nombre: 'Spring Boot', icon: 'springboot' },
+    { nombre: 'PHP', icon: 'php' },
+    { nombre: 'Java', icon: 'java' },
+    { nombre: 'Ruby', icon: 'ruby' },
+    { nombre: 'Bootstrap', icon: 'bootstrap' }
   ];
 
   constructor() { }
