@@ -1,11 +1,23 @@
 <div class="separator-gradient"></div>
 <section id="projects">
     <h2 class="mt-5">Mis proyectos</h2>
-    <div class="project-grid">
+    <!--<div class="project-grid"> -->
+    <div class="card-group">
         @for (project of projects; track $index) {
+            <!--
             <div class="project-card">
                 <h3>{{ project.title }}</h3>
                 <p>{{ project.body }}</p>
+            </div>
+            <!---->
+            <div class="card">
+                <img src="/assets/projects/{{project.portada}}.png" class="card-img-top imagen_portada" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{ project.title }}</h5>
+                    <p class="card-text">{{ project.body }}</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <button class="btn btn-secondary">Más info</button>
+                </div>
             </div>
         }
     </div>
