@@ -11,10 +11,10 @@
             </div>
             <!---->
             <div class="card">
-                <img src="/assets/projects/{{project.portada}}.png" class="card-img-top imagen_portada" alt="...">
+                <img src="{{project.images[0].image_url}}.png" class="card-img-top imagen-portada" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">{{ project.title }}</h5>
-                    <p class="card-text">{{ project.body }}</p>
+                    <p class="card-text">{{ project.short_description }}</p>
                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     <button class="btn btn-secondary">Más info</button>
                 </div>

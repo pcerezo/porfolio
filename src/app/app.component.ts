@@ -7,12 +7,15 @@ import { ToolsComponent } from "./components/tools/tools.component";
 import { ContactComponent } from "./components/contact/contact.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { WelcomeComponent } from "./components/welcome/welcome.component";
+import { InicioComponent } from "./components/inicio/inicio.component";
+import { provideHttpClient, withFetch } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, ProjectsComponent, AboutComponent, ToolsComponent, ContactComponent, 
-    FooterComponent, WelcomeComponent, WelcomeComponent],
+  imports: [RouterOutlet, HeaderComponent, ProjectsComponent, AboutComponent, ToolsComponent, ContactComponent,
+    FooterComponent, WelcomeComponent, WelcomeComponent, InicioComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

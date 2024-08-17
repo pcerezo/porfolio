@@ -29,7 +29,8 @@
 }
 
 .imagen-portada {
-    height: 100px !important;
-    width: auto;
+    height: 500px !important;
+    width: auto !important;
+    object-fit: contain !important;
 }
   
