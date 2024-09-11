@@ -1,0 +1,80 @@
+/* Estilos para el Título Principal */
+.section-header {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    color: #28a745;
+    font-weight: bold;
+    padding: 0 20px; /* Espaciado horizontal */
+  }
+  
+  .section-header::before,
+  .section-header::after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 50%;
+    background-color: #28a745;
+  }
+  
+  .section-header::before {
+    top: -10px;
+    left: 25%;
+  }
+  
+  .section-header::after {
+    bottom: -10px;
+    left: 25%;
+  }
+  
+  /* Estilos para Sub-Encabezados */
+  .section-subheader {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #28a745;
+    font-weight: bold;
+    padding: 0 15px;
+  }
+  
+  .section-subheader::before,
+  .section-subheader::after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    width: 40%;
+    background-color: #28a745;
+  }
+  
+  .section-subheader::before {
+    top: -8px;
+    left: 30%;
+  }
+  
+  .section-subheader::after {
+    bottom: -8px;
+    left: 30%;
+  }
+  
+  /* Estilos para el Footer */
+  .footer-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #28a745;
+  }
+  
+  /* Opcional: Estilos adicionales para mejorar la apariencia */
+  body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+  }
+  
+  .lead {
+    font-size: 1.25rem;
+  }
+  

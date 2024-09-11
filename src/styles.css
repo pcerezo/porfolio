@@ -4,3 +4,19 @@
     background: linear-gradient(to right, #ff7e5f, #0f0802);
     margin: 40px 0;
 }
+
+body {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 100vh !important; /* Hace que el body siempre tenga al menos el tamaño de la ventana */
+}
+
+html, body {
+    height: 100% !important;
+    margin: 0 !important;
+}
+
+app-root {
+    flex: 1; /* Toma el espacio disponible restante */
+    padding: 20px; /* Ejemplo de padding para el contenido */
+}
