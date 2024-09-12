@@ -1,66 +1,82 @@
-<div class="content-wrapper d-flex flex-column min-vh-100">
+<div class="container mt-5">
+    <!-- Título principal -->
+    <div class="text-center mb-5 mt-10">
+      <h1 class="display-4 fw-bold">Título del Proyecto</h1>
+    </div>
   
-    <!-- Título Principal -->
-    <header class="my-5 text-center section-header">
-      <h1 class="display-4 text-uppercase">Título Principal</h1>
-    </header>
+    <!-- Imagen de Portada -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <img src="https://placehold.co/1200x400?font=roboto" class="img-fluid w-100 rounded" alt="Imagen de portada">
+      </div>
+    </div>
   
-    <!-- Imagen de Portada Destacada -->
-    <section class="mb-5">
-      <img src="assets/portada.jpg" class="img-fluid w-100" alt="Imagen de Portada">
-    </section>
+    <!-- Descripción completa -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <h2 class="h4 text-uppercase">Descripción completa</h2>
+        <p class="lead">
+          ¡Bienvenidos al proyecto! Este proyecto se enfoca en proporcionar soluciones innovadoras para la industria musical. 
+          Nuestra misión es mejorar la producción musical con tecnología avanzada, logrando experiencias únicas para los usuarios.
+        </p>
+      </div>
+    </div>
   
-    <!-- Sección de Descripción Completa -->
-    <section class="mb-5">
-      <p class="lead text-center">
-        Aquí va una descripción completa del proyecto. Este texto debe explicar detalladamente los aspectos principales del proyecto, sus objetivos, funcionalidades y cualquier otra información relevante que desees comunicar.
-      </p>
-    </section>
-  
-    <!-- Galería de Imágenes -->
-    <section class="mb-5">
-        <h2 class="text-center mb-4 section-subheader">Galería de Imágenes</h2>
-        <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                <!-- Agrega más indicadores si tienes más imágenes -->
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="assets/gallery1.jpg" class="d-block w-100" alt="Galería 1">
-                </div>
-                <div class="carousel-item">
-                    <img src="assets/gallery2.jpg" class="d-block w-100" alt="Galería 2">
-                </div>
-                <div class="carousel-item">
-                    <img src="assets/gallery3.jpg" class="d-block w-100" alt="Galería 3">
-                </div>
-                <!-- Agrega más imágenes según sea necesario -->
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Anterior</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Siguiente</span>
-            </button>
+    <!-- Galería de imágenes -->
+    
+    <h2 class="h4 text-uppercase">Galería de imágenes</h2>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-theme="dark">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-    </section>
-  
-    <!-- Lista de Tecnologías Usadas -->
-    <section class="mb-5">
-        <h2 class="text-center mb-4 section-subheader">Tecnologías Usadas</h2>
-        <div class="d-flex justify-content-center flex-wrap gap-2">
-            <span class="badge bg-primary text-uppercase">Angular</span>
-            <span class="badge bg-secondary text-uppercase">Bootstrap</span>
-            <span class="badge bg-success text-uppercase">TypeScript</span>
-            <span class="badge bg-danger text-uppercase">HTML</span>
-            <span class="badge bg-warning text-dark text-uppercase">CSS</span>
-            <!-- Agrega más tecnologías según sea necesario -->
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+            <img src="https://via.placeholder.com/1000x600" class="img-thumbnail d-block mx-auto w-auto img-fluid" alt="Imagen 1">       
+            <div class="carousel-caption d-none d-md-block position-static text-center mt-3">
+                <h5>First slide label</h5>
+                <p>Some representative placeholder content for the first slide.</p>
+            </div>
+            </div>
+            <div class="carousel-item">
+            <img src="https://via.placeholder.com/300x200" class="img-thumbnail d-block mx-auto w-auto img-fluid" alt="Imagen 1">
+            <div class="carousel-caption d-none d-md-block position-static text-center mt-3">
+                <h5>Second slide label</h5>
+                <p>Some representative placeholder content for the second slide.</p>
+            </div>
+            </div>
+            <div class="carousel-item">
+            <img src="https://via.placeholder.com/300x200" class="img-thumbnail d-block mx-auto w-auto img-fluid" alt="Imagen 1">
+            <div class="carousel-caption d-none d-md-block position-static text-center mt-3">
+                <h5>Third slide label</h5>
+                <p>Some representative placeholder content for the third slide.</p>
+            </div>
+            </div>
         </div>
-    </section>    
-</div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    
+  
+    <!-- Tecnologías usadas -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <h2 class="h4 text-uppercase">Tecnologías Usadas</h2>
+        <div class="d-flex flex-wrap">
+          <span class="badge bg-primary m-1 p-2">HTML5</span>
+          <span class="badge bg-secondary m-1 p-2">CSS3</span>
+          <span class="badge bg-success m-1 p-2">JavaScript</span>
+          <span class="badge bg-info m-1 p-2">Angular</span>
+          <span class="badge bg-warning m-1 p-2">Bootstrap</span>
+        </div>
+      </div>
+    </div>
+  </div>
   

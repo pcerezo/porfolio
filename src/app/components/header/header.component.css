@@ -1,5 +1,5 @@
 header {
-    position: fixed;
+    position: unset;
     top: 0;
     width: 100%;
     display: flex;
@@ -7,6 +7,8 @@ header {
     align-items: center;
     padding: 20px;
     background: #f4f4f4;
+    padding-right: 15%;
+    padding-left: 15%;
 }
 
 header .logo {
