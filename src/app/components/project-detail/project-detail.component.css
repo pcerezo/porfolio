@@ -96,3 +96,8 @@
 .carousel-caption {
   margin-top: 20%;
 }
+
+.portada {
+  max-height: 400px;
+  max-width: fit-content;
+}
