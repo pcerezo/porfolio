@@ -1,7 +1,7 @@
 <div class="container mt-5">
     <!-- Título principal -->
     <div class="text-center mb-5 mt-10">
-      <h1 class="display-4 fw-bold">{{projectDetail?.title}}</h1>
+      <h1 class="display-4 fw-bold">{{projectDetail.title}}</h1>
     </div>
   
     <!-- Imagen de Portada -->
@@ -25,7 +25,7 @@
       <div class="col-12">
         <h2 class="h4 text-uppercase">Descripción completa</h2>
         <p class="lead">
-          {{projectDetail?.description}}
+          {{projectDetail.description}}
         </p>
       </div>
     </div>
@@ -35,11 +35,13 @@
     <h2 class="h4 text-uppercase">Galería de imágenes</h2>
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-theme="dark">
         <div class="carousel-indicators">
-          <button type="button" (click)="setActiveSlide($index)" data-bs-target="#carouselExampleCaptions" 
-            [data-bs-slide-to]="$index" [class.active]="$index === activeIndex" [attr.aria-current]="$index === activeIndex" aria-label="Slide 1"></button>
+          @for (image of projectDetail.images; track $index) {
+            <button type="button" (click)="setActiveSlide($index)" data-bs-target="#carouselExampleCaptions" 
+              [attr.data-bs-slide-to]="$index" [class.active]="$index === activeIndex" [attr.aria-current]="$index === activeIndex" aria-label="Slide 1"></button>
+          }
         </div>
         <div class="carousel-inner">
-          @for (image of projectDetail?.images; track $index) {
+          @for (image of projectDetail.images; track $index) {
             @if($index == 0) {
               <div class="carousel-item active">
                 <img src={{image.image_url}} class="img-thumbnail d-block mx-auto w-auto img-fluid" alt="Imagen 1">       

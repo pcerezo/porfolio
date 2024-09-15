@@ -12,11 +12,28 @@ import { ActivatedRoute } from '@angular/router';
   providers: [ProjectService]
 })
 export class ProjectDetailComponent {
-  projectDetail: ProjectDetail | undefined = undefined;
-  id: string = "";
+  projectDetail: ProjectDetail = {
+    id: -1, title: '', 
+    short_description: '', 
+    description: '', 
+    project_url: '', 
+    repository_url: '', 
+    status: '', 
+    responsibilities: '', 
+    start_date: '',
+    end_date: '',
+    client: '',
+    role: '',
+    Technologies: [],
+    Categories: [],
+    images: []};
+  id: string = '';
   activeIndex = 0;
 
   constructor(private projectService: ProjectService, private route: ActivatedRoute) {
+  }
+
+  ngOnInit() {
     // Se obtiene el ID del proyecto que se está consultando
     this.route.paramMap.subscribe(params => {
       let varId = params.get('id')?.toString();
@@ -28,29 +45,15 @@ export class ProjectDetailComponent {
     });
 
     // Se obtienen los datos del proyecto a partir de su ID
-    projectService.getProjectById(Number.parseInt(this.id)).subscribe(project => {
+    this.projectService.getProjectById(Number.parseInt(this.id)).subscribe(project => {
       if (project != undefined || project != null) {
         this.projectDetail = project;
       }
     });
   }
 
-  ngOnInit() {}
-
   getImagenPortada(): any {
-    var images = this.projectDetail?.images;
-
-    if (images != undefined) {
-      for (let index = 0; index < images.length; index++) {
-        const element = images[index];
-        
-        if (element.order == 1) {
-          return element;
-        }
-      }
-    }
-
-    return undefined;
+    return this.projectService.getImagenPortada(this.projectDetail);
   }
 
   // Método para cambiar la diapositiva activa

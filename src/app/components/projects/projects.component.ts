@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterLink } from '@angular/router';
 import { Router } from 'express';
+import { ProjectDetail } from '../../models/projectDetail';
+import { ProjectSummary } from '../../models/projectSummary';
 
 @Component({
   selector: 'app-projects',
@@ -14,7 +16,7 @@ import { Router } from 'express';
   providers: [ProjectService]
 })
 export class ProjectsComponent implements OnInit {
-  projects: any[] = [];
+  projects: ProjectSummary[] = [];
 
   constructor(private projectService: ProjectService) { }
 
@@ -22,6 +24,10 @@ export class ProjectsComponent implements OnInit {
     this.projectService.getProjects().subscribe(data => {
       this.projects = data;
     });
+  }
+
+  getImagenPortada(projectDetail: ProjectSummary) {
+    return this.projectService.getImagenPortadaSummary(projectDetail);
   }
 
   
