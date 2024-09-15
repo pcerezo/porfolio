@@ -33,6 +33,7 @@ export class ProjectDetailComponent {
   constructor(private projectService: ProjectService, private route: ActivatedRoute) {
   }
 
+  /*
   ngOnInit() {
     // Se obtiene el ID del proyecto que se está consultando
     this.route.paramMap.subscribe(params => {
@@ -49,6 +50,14 @@ export class ProjectDetailComponent {
       if (project != undefined || project != null) {
         this.projectDetail = project;
       }
+    });
+  }
+    */
+  
+  ngOnInit() {
+    // Obtener el proyecto resuelto por el resolver
+    this.route.data.subscribe(data => {
+      this.projectDetail = data['project'];
     });
   }
 
