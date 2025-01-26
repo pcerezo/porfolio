@@ -10,7 +10,7 @@ import { ProjectDetail } from '../models/projectDetail';
 
 export class ProjectService {
 
-  private apiUrl = 'http://localhost:3000/api';
+  private apiUrl = 'http://127.0.0.1:27017/api';
 
   constructor(private http: HttpClient) { }
 
@@ -41,7 +41,7 @@ export class ProjectService {
   getImagenPortadaSummary(projectDetail: ProjectSummary): any {
     var images = projectDetail?.images;
 
-    if (images != undefined) {
+    if (images) {
       for (let index = 0; index < images.length; index++) {
         const element = images[index];
         

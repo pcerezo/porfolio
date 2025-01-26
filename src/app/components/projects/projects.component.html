@@ -9,9 +9,14 @@
                 <h3>{{ project.title }}</h3>
                 <p>{{ project.body }}</p>
             </div>
-            <!---->
+            -->
             <div class="card">
-                <img src="{{getImagenPortada(project).image_url}}" class="card-img-top imagen-portada" alt="...">
+                @if (getImagenPortada(project) == undefined) {
+                    <img src="assets/projects/default.jpg" class="card-img-top imagen-portada" alt="default image">
+                }
+                @else {
+                    <img src="{{getImagenPortada(project).image_url}}" class="card-img-top imagen-portada" alt="{{getImagenPortada(project).alt_text}}">
+                }
                 <div class="card-body">
                     <h5 class="card-title">{{ project.title }}</h5>
                     <p class="card-text">{{ project.short_description }}</p>
