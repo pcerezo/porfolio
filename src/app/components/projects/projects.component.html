@@ -20,8 +20,24 @@
                 <div class="card-body">
                     <h5 class="card-title">{{ project.title }}</h5>
                     <p class="card-text">{{ project.short_description }}</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    <a class="btn btn-secondary" routerLink="/proyecto/{{project.id}}">Más info</a>
+                    <p class="card-text"><small 
+                        [class]="{
+                            'estado-en-analisis': project.status.toLowerCase().includes('analisis'),
+                            'estado-en-diseno': project.status.toLowerCase().includes('diseno'),
+                            'estado-en-desarrollo': project.status.toLowerCase().includes('desarrollo') && !project.status.toLowerCase().includes('avanzado'),
+                            'estado-en-desarrollo-avanzado': project.status.toLowerCase().includes('desarrollo avanzado'),
+                            'estado-en-pruebas': project.status.toLowerCase().includes('pruebas'),
+                            'estado-en-entrega': project.status.toLowerCase().includes('entrega'),
+                            'estado-finalizado': project.status.toLowerCase().includes('finalizado')
+                        }"
+                        >
+                        {{project.status}}
+                        </small>
+                    </p>
+                    @if (project.end_date) {
+                        <p class="card-text"><small class="text-muted">{{project.end_date | date }}</small></p>
+                    }
+                    <a class="btn btn-secondary" routerLink="/proyecto/{{project._id}}">Más info</a>
                 </div>
             </div>
         }

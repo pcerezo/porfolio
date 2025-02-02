@@ -1,6 +1,7 @@
 import { ProjectSummary } from "./projectSummary";
 
 export interface ProjectDetail extends ProjectSummary {
+    _id: string;
     description: string;
     responsibilities: string;
     project_url: string;

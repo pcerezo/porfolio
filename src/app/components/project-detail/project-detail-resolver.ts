@@ -12,6 +12,7 @@ export class DatosResolver implements Resolve<any> {
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<ProjectDetail> {
     const projectId = route.paramMap.get('id');
-    return this.projectService.getProjectById(Number(projectId));
+    console.log('ID:', projectId?.toString());
+    return this.projectService.getProjectById(projectId!.toString());
   }
 }

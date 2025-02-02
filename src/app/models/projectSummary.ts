@@ -1,12 +1,13 @@
 export interface ProjectSummary {
-    id: number;
+    _id: string;
     title: string;
     short_description: string;
     start_date: string;
     end_date: string;
     client: string;
     role: string;
-    Technologies: { name: string }[];
+    technologies: { name: string }[];
     Categories: { name: string }[];
     images: { image_url: string, alt_text: string, order: number }[];
+    status: string;
 }

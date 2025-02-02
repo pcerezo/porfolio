@@ -10,7 +10,7 @@ import { ProjectDetail } from '../models/projectDetail';
 
 export class ProjectService {
 
-  private apiUrl = 'http://127.0.0.1:27017/api';
+  private apiUrl = 'http://localhost:27017/api';
 
   constructor(private http: HttpClient) { }
 
@@ -18,7 +18,7 @@ export class ProjectService {
     return this.http.get<ProjectDetail[]>(`${this.apiUrl}/projects`);
   }
 
-  getProjectById(id: number): Observable<ProjectDetail> {
+  getProjectById(id: string): Observable<ProjectDetail> {
     return this.http.get<ProjectDetail>(`${this.apiUrl}/projects/${id}`);
   }
 

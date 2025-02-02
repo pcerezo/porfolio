@@ -34,3 +34,45 @@
     object-fit: contain !important;
 }
   
+/* Estilos para los diferentes estados del proyecto */
+.estado-en-analisis {
+    background-color: #f0f0f0;
+    color: #000;
+    font-weight: bold;
+}
+
+.estado-en-diseno {
+    background-color: #d1e7dd;
+    color: #0f5132;
+    font-weight: bold;
+}
+
+.estado-en-desarrollo {
+    background-color: #cff4fc;
+    color: #055160;
+    font-weight: bold;
+}
+
+.estado-en-desarrollo-avanzado {
+    background-color: #fff3cd;
+    color: #664d03;
+    font-weight: bold;
+}
+
+.estado-en-pruebas {
+    background-color: #f8d7da;
+    color: #842029;
+    font-weight: bold;
+}
+
+.estado-en-entrega {
+    background-color: #e2e3e5;
+    color: #41464b;
+    font-weight: bold;
+}
+
+.estado-finalizado {
+    background-color: #d4edda;
+    color: #155724;
+    font-weight: bold;
+}
