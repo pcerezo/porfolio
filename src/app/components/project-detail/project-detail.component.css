@@ -5,7 +5,11 @@
   color: #1d3557;
   font-weight: bold;
   padding: 10px 20px;
-  position: relative;
+  border-style: ridge;
+  border-radius: 19%;
+  width: fit-content;
+  justify-self: center;
+  border-block-width: 10px;
 }
 
 .section-header::before {
@@ -39,4 +43,13 @@
 
 .shadow-sm {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-caption {
+  position: static !important;
+  padding-bottom: 3.25rem !important;
+}
+
+#descripcion_proyecto {
+  font-size: 1.2rem;
 }

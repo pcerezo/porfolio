@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ProjectDetail } from '../../models/projectDetail';
 import { ProjectService } from '../../services/project.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DatePipe } from '@angular/common';
 
 @Component({
@@ -33,7 +33,7 @@ export class ProjectDetailComponent {
 
   contenidoArray: string[] = [];
 
-  constructor(private projectService: ProjectService, private route: ActivatedRoute) {
+  constructor(private projectService: ProjectService, private route: ActivatedRoute, private router: Router) {
   }
   
   ngOnInit() {
@@ -71,5 +71,10 @@ export class ProjectDetailComponent {
   contenidoParrafos() {
     // Divide el contenido en párrafos usando un delimitador adecuado, como '\n\n' 
     this.contenidoArray = this.projectDetail.description.split('\n\n');
+  }
+
+  // Método para volver a la página anterior
+  goBack(): void {
+    this.router.navigate(['/inicio']);
   }
 }
