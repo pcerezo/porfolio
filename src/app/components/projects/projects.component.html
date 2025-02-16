@@ -1,15 +1,7 @@
-<div class="separator-gradient"></div>
 <section id="projects">
     <h2 class="mt-5">Mis proyectos</h2>
-    <!--<div class="project-grid"> -->
     <div class="card-group">
         @for (project of projects; track $index) {
-            <!--
-            <div class="project-card">
-                <h3>{{ project.title }}</h3>
-                <p>{{ project.body }}</p>
-            </div>
-            -->
             <div class="card">
                 @if (getImagenPortada(project) == undefined) {
                     <img src="assets/projects/default.jpg" class="card-img-top imagen-portada" alt="default image">

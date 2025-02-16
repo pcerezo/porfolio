@@ -1,8 +1,14 @@
 .separator-gradient {
     width: 100%;
-    height: 50px;
-    background: linear-gradient(to right, #ff7e5f, #0f0802);
+    height: 10px;
+    background: linear-gradient(to right, #0055d3, #00aaff);
     margin: 40px 0;
+    border-radius: 5px;
+}
+
+
+p {
+    font-family: 'Poppins', sans-serif;
 }
 /*
 body {
