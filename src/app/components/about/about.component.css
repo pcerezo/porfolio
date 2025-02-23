@@ -1,7 +1,8 @@
 #about {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: auto;
+    background: #f8f9fa;
+    padding: 5% 5% 5% 20%;
+    /*max-width: 1000px;*/
+    text-align: center;
 }
 
 .about-container {
@@ -9,6 +10,8 @@
     align-items: center;
     gap: 30px;
     text-align: left;
+    justify-content: center;
+    max-width: 900px;
 }
 
 .about-image img {
@@ -16,7 +19,7 @@
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #0055d3;
+    border: 3px solid #00040a;
 }
 
 .about-text {

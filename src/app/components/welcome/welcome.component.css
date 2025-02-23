@@ -1,7 +1,7 @@
 #welcome {
-    margin-top: 50px;
+    margin-top: 0px;
     margin-bottom: 0px;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url('/assets/welcome-background.webp') no-repeat center center;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/assets/welcome-background.webp') no-repeat center center;
     background-size: cover;
     color: white;
     text-align: center;

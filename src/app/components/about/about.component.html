@@ -1,8 +1,10 @@
 <section id="about" class="text-start">
     <div class="about-container">
-        <div class="about-image">
-            <img src="/assets/profile.jpg" alt="Pablo Cerezo">
-        </div>
+        @if (imageExists) {
+            <div class="about-image">
+                <img src="/assets/profile.png" alt="Pablo Cerezo">
+            </div>
+        }
         <div class="about-text">
             <h2>Sobre mí</h2>
             <p>Mi nombre es Pablo Cerezo y soy desarrollador de software, formado en la Universidad de Granada en el grado de Ingeniería Informática especializado en desarrollo web.</p>

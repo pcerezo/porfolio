@@ -1,14 +1,21 @@
 <section id="contact">
-    <h2>Contacto</h2>
-    <form (submit)="submitForm()">
-    <input type="text" name="nombre" placeholder="Nombre" required [(ngModel)]="nombre">
-    <input type="email" name="email" placeholder="Email" required [(ngModel)]="email">
-    <textarea name="mensaje" placeholder="Mensaje" required [(ngModel)]="mensaje"></textarea>
-    <button type="submit">Enviar</button>
+    <h2 class="text-center">Contacto</h2>
+    <h5 class="text-center">Si te interesa tener un porfolio web donde te promociones a ti o a tu proyecto, hablemos. Pregúntame sin compromiso.</h5>
+    <form (submit)="submitForm()" class="contact-form">
+        <div class="form-group">
+            <input type="text" name="nombre" placeholder="Nombre" required [(ngModel)]="nombre" class="form-control">
+        </div>
+        <div class="form-group">
+            <input type="email" name="email" placeholder="Email" required [(ngModel)]="email" class="form-control">
+        </div>
+        <div class="form-group">
+            <textarea name="mensaje" placeholder="Mensaje" required [(ngModel)]="mensaje" class="form-control"></textarea>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-dark">Enviar</button>
+        </div>
     </form>
-    <div class="contact-info">
-    <p>Email: ejemplo&#64;correo.com</p>
-    <p>Teléfono: +123456789</p>
-    </div>
+
+    <p class="text-center">Recibirás una respuesta en tu correo lo más pronto posible 😉</p>
 </section>
   
